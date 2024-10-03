@@ -15,7 +15,7 @@ const timelineData = [
   {
     title: "Application Development Analyst",
     company: "Accenture",
-    logo: "src/assets/Accenture.png", // Add logo path
+    logo: "public/Accenture.png", // Add logo path
     duration: "Feb 2021 - July 2023",
     description:
       "Collaborated on building a Gradient Boost model in Python (improving energy consumption forecasting accuracy by 11%), handled data preprocessing, hyperparameter tuning, and real-time integration for Total Energies, designed a Power BI dashboard (reducing operational costs by 20%), developed an optimization model in AMPL (minimizing transportation costs by 7%), automated over 20 processes with Blue Prism (99% success rate), utilized Python APIs and advanced SQL in Microsoft SQL Server for task execution, and worked in remote Citrix environments while managing development with JIRA, ITIL, Lean, and DevOps practices",
