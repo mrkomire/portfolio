@@ -16,10 +16,6 @@ import pythonlogo from "../assets/python.svg";
 import rlogo from "../assets/rstudio.svg";
 import sql from "../assets/postgresql.svg";
 import mongodb from "../assets/Mongodb.svg";
-import { SiMongodb } from "react-icons/si";
-import { DiRedis } from "react-icons/di";
-import { FaNodeJs } from "react-icons/fa";
-import { BiLogoPostgresql } from "react-icons/bi";
 import powerbiLogo from "../assets/powerbi-logo.svg";
 
 import image1 from "../assets/project1.png";

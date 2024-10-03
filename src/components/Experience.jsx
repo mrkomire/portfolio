@@ -6,7 +6,7 @@ const timelineData = [
   {
     title: "Master of Science in Business Statistics",
     institution: "University of New Hampshire",
-    logo: "/src/assets/unh.png", // Add university logo
+    logo: "src/assets/unh.png", // Add university logo
     duration: "Aug 2023 - Sep 2024",
     description:
       "Focused on Business Intelligence, Statistical Learning, Time Series Analysis, and Optimization Methods. Graduated with a GPA of 3.8/4.",
@@ -15,7 +15,7 @@ const timelineData = [
   {
     title: "Application Development Analyst",
     company: "Accenture",
-    logo: "/src/assets/Accenture.png", // Add logo path
+    logo: "src/assets/Accenture.png", // Add logo path
     duration: "Feb 2021 - July 2023",
     description:
       "Collaborated on building a Gradient Boost model in Python (improving energy consumption forecasting accuracy by 11%), handled data preprocessing, hyperparameter tuning, and real-time integration for Total Energies, designed a Power BI dashboard (reducing operational costs by 20%), developed an optimization model in AMPL (minimizing transportation costs by 7%), automated over 20 processes with Blue Prism (99% success rate), utilized Python APIs and advanced SQL in Microsoft SQL Server for task execution, and worked in remote Citrix environments while managing development with JIRA, ITIL, Lean, and DevOps practices",
@@ -24,7 +24,7 @@ const timelineData = [
   {
     title: "Network Operations Intern",
     company: "BSNL",
-    logo: "/src/assets/bsnl.png", // Add logo path
+    logo: "src/assets/bsnl.png", // Add logo path
     duration: "Oct 2020 - Jan 2021",
     description:
       "Assisted technical teams in optimizing the transition from copper to fiber optic cables across BSNL’s network, ensuring minimal disruption and enhanced performance.",
@@ -33,7 +33,7 @@ const timelineData = [
   {
     title: "Test Reporting Intern",
     company: "Medha Servo Drives Pvt Ltd",
-    logo: "/src/assets/medha.png", // Add logo path
+    logo: "src/assets/medha.png", // Add logo path
     duration: "June 2018 - Sep 2018",
     description:
       "Conducted rigorous testing of components essential for installation on railway engines, meticulously documenting test results and reports.",
@@ -42,7 +42,7 @@ const timelineData = [
   {
     title: "Bachelor of Engineering in Electronics and Communication",
     institution: "CBIT, Hyderabad",
-    logo: "/src/assets/cbit.png", // Add college logo
+    logo: "src/assets/cbit.png", // Add college logo
     duration: "July 2016 - Sep 2020",
     description:
       "Specialized in Data Structures, Machine Learning, and Database Management Systems, achieving top-tier rank in the state EAMCET exam.",
