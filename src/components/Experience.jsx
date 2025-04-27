@@ -1,12 +1,18 @@
 import React from "react";
 import './Experience.css'; // Import the CSS file
+// At the top of your file
+import gribonLogo from '../assets/griboncompany_logo.jpg';
+import lonzaLogo from '../assets/Lonza.png';
+import unhLogo from '../assets/unh.png';
+import accentureLogo from '../assets/Accenture.png';
+import cbitLogo from '../assets/cbit.png';
 
 // Updated Experience and Education data
 const timelineData = [
   {
     title: "AI & Data Science Consultant",
     company: "GRIBON & COMPANY",
-    logo: "src/assets/griboncompany_logo.jpg", // Add university logo
+    logo: gribonLogo, // Add university logo
     duration: "Mar 2025 - Present",
     description:
       "Architected a conversational AI agent on GCP to ingest and analyze Zoom/Meet transcripts and SurveyMonkey data, reducing manual synthesis time by 90%, and optimized ETL pipelines and fine-tuned LLMs, improving data processing efficiency by 40% and model accuracy by 30-40%",
@@ -15,7 +21,7 @@ const timelineData = [
   {
     title: "Business Intelligence Analyst",
     institution: "Lonza Biologics Inc.",
-    logo: "src/assets/Lonza.png", // Add university logo
+    logo: lonzaLogo, // Add university logo
     duration: "Oct 2024 - Feb 2025",
     description:
       "Built predictive models in Python using logistic regression and decision trees, reducing rejection rates by 25%, and optimized SQL pipelines, improving data reliability and reducing ETL time by 17%; automated Looker dashboard deployment, cutting errors by 75%, and delivered dashboards ahead of schedule, enhancing operational reviews by 50%. Conducted statistical analysis to improve batch consistency by 15%, and automated data ingestion processes, saving 24+ hours per week",
@@ -24,7 +30,7 @@ const timelineData = [
   {
     title: "Master of Science in Business Statistics",
     institution: "University of New Hampshire",
-    logo: "src/assets/unh.png", // Add university logo
+    logo: unhLogo, // Add university logo
     duration: "Aug 2023 - Sep 2024",
     description:
       "Focused on Business Intelligence, Statistical Learning, Time Series Analysis, and Optimization Methods. Graduated with a GPA of 3.8/4.",
@@ -33,7 +39,7 @@ const timelineData = [
   {
     title: "Data Analyst",
     company: "Accenture",
-    logo: "src/assets/Accenture.png", // Add logo path
+    logo: accentureLogo, // Add logo path
     duration: "Feb 2021 - July 2023",
     description:
       "Developed Tableau dashboards to visualize KPIs, reducing operational costs by 20%, and built a CPLEX model in AMPL to optimize routes, cutting transport costs by 7%. Forecasted product demand using ML in Python, improving accuracy by 15%, and automated 10+ data processes, speeding up reporting and reducing errors. Built and optimized SQL scripts for data cleansing and aggregation, improving downstream data quality by 30%",
@@ -42,7 +48,7 @@ const timelineData = [
   {
     title: "Bachelor of Engineering in Electronics and Communication",
     institution: "CBIT, Hyderabad",
-    logo: "src/assets/cbit.png", // Add college logo
+    logo: cbitLogo, // Add college logo
     duration: "July 2016 - Sep 2020",
     description:
       "Specialized in Data Structures, Machine Learning, and Database Management Systems",
