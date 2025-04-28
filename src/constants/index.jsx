@@ -17,6 +17,7 @@ import rlogo from "../assets/rstudio.svg";
 import sql from "../assets/postgresql.svg";
 import mongodb from "../assets/Mongodb.svg";
 import powerbiLogo from "../assets/powerbi-logo.svg";
+import azurelogo from  "../assets/azure.png";
 
 import image1 from "../assets/project1.png";
 import image2 from "../assets/Project2.png";
@@ -52,7 +53,7 @@ export const PROFILE = {
     </span>
   ),
   info: [
-    "Data-Driven Professional | Expertise in Business Statistics, Analytics, and Machine Learning with 3+ Years of Experience.",
+    "Data Scientist and Consultant specializing in predictive analytics, business intelligence, and RPA",
   ],
 };
 
@@ -60,29 +61,29 @@ export const PROFILE = {
 
 export const ABOUT = {
   text1:
-    "I turn data into stories and solutions with a dash of creativity and innovation!",
+    "I build scalable data pipelines, intelligent dashboards, and automation solutions that drive real business value!",
   text2: "Hello! I'm Sathish Komire, and I love finding stories hidden in big data.",
 };
 
 // Projects section remains unchanged
 export const PROJECTS = [
   {
-    title: "Airbnb booking rate Prediction and Causal Inference",
+    title: "Airbnb – Booking Prediction and Causal Analysis",
     subtitle:
-      "An XGBoost model with 82.8% AUC to predict Airbnb booking rates in LA, followed by causal inference analysis identifying key factors like guest capacity, pricing, and host response rate driving higher bookings",
+      "Performed extensive preprocessing and feature engineering on panel data, built and optimized an XGBoost model using the Caret package in R to improve AUC from 0.77 to 0.84, and conducted causal inference with DAGs and fixed effects to reveal that 1–2 person accommodations priced at $60–$110 and host response rates above 75% significantly increase bookings",
     image: image1,
     link: "https://github.com/mrkomire/Big-Data"
+  },
+  {
+    title: "USDINR – Time Series Forecasting",
+    subtitle: "Built a Bayesian time series model using the stochvol package in R to forecast USDINR volatility, tuning prior distributions via svsample to optimize model fit, achieved a 22% improvement in predictive accuracy compared to baseline GARCH models, reducing RMSE from 0.027 to 0.021 on out-of-sample forecasts",
+    image: image3,
+    link: "https://github.com/mrkomire/Forex_USDINR",
   },
   {
     title: "Email Classification",
     subtitle: "Executed text preprocessing and dimensionality reduction to build a spam email filter using a Random Forest model, achieving an MSE of 0.0307",
     image: image2,
-  },
-  {
-    title: "Stochastic Volatility Forecasting for USDINR",
-    subtitle: "A Bayesian volatility model using the 'stochvol' package in R, tuning prior distribution parameters to predict future volatility based on historical data",
-    image: image3,
-    link: "https://github.com/mrkomire/Forex_USDINR",
   },
   {
     title: "Commodity Portfolio Optimization",
@@ -142,25 +143,31 @@ export const SKILLS = [
     experience: "3+ years",
   },
   {
+    icon: <img src={tableaulogo} alt="Tableau Logo" className="w-12 h-12 lg:w-16 lg:h-16" />,
+    name: "Tableau",
+    experience: "3+ years",
+  },
+  {
     icon: <img src={powerbiLogo} alt="PowerBI Logo" className="w-12 h-12 lg:w-16 lg:h-16" />,
     name: "PowerBI",
     experience: "2+ years",
   },
   {
+    icon: <img src={azurelogo} alt="Azure Logo" className="w-12 h-12 lg:w-16 lg:h-16" />,
+    name: "Azure",
+    experience: "3+ years",
+  },
+  {
     icon: <img src={awslogo} alt="AWS Logo" className="w-12 h-12 lg:w-16 lg:h-16" />,
     name: "AWS",
-    experience: "1+ years",
+    experience: "2+ years",
   },
   {
     icon: <img src={rlogo} alt="R Logo" className="w-12 h-12 lg:w-16 lg:h-16" />,
     name: "R",
-    experience: "3+ years",
+    experience: "2+ years",
   },
-  {
-    icon: <img src={tableaulogo} alt="Tableau Logo" className="w-12 h-12 lg:w-16 lg:h-16" />,
-    name: "Tableau",
-    experience: "3+ years",
-  },
+
   {
     icon: <img src={mongodb} alt="MongoDB Logo" className="w-12 h-12 lg:w-16 lg:h-16" />,
     name: "MongoDB",
@@ -168,26 +175,15 @@ export const SKILLS = [
   },
 ];
 
-// Updated to keep only the Experience section
-export const EXPERIENCE = [
-  {
-    title: "Application Development Analyst",
-    company: "Accenture",
-    duration: "2021 - 2023",
-    description:
-      "Improved energy consumption forecasting accuracy by 11% using XGBoost, optimized supply chain operations reducing transportation costs by 7%, automated 20+ processes with a 99% success rate using Blue Prism, and developed Power BI dashboards reducing operational costs by 20% for Total Energies",
-  },
-  {
-    title: "Front-End Developer Intern",
-    company: "Creative Solutions Ltd.",
-    duration: "2021 - 2022",
-    description:
-      "Worked on improving user interfaces and enhancing UX for a variety of client projects. Utilized React and Redux to build interactive components and optimize performance.",
-  },
-];
-
 // Updated certifications section
 export const CERTIFICATIONS = [
+  {
+    name: "Microsoft Certified Data Scientist Associate",
+    issuingOrganization: "Microsoft",
+    issueDate: "April 2025",
+    icon: azurelogo,
+    link: "https://learn.microsoft.com/en-us/users/sathishkomire-2168/transcript/vy0zgty553556ky"
+  },
   {
     name: "Microsoft Data Analytics Professional",
     issuingOrganization: "Microsoft",
