@@ -2,7 +2,7 @@ import React from "react";
 import './Experience.css'; // Import the CSS file
 // At the top of your file
 import gribonLogo from '../assets/griboncompany_logo.jpg';
-import lonzaLogo from '../assets/Lonza.png';
+import lonzaLogo from '../assets/Lonza.jpg';
 import unhLogo from '../assets/unh.png';
 import accentureLogo from '../assets/Accenture.png';
 import cbitLogo from '../assets/cbit.png';
