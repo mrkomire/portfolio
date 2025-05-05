@@ -36,15 +36,15 @@ const timelineData = [
       "Focused on Business Intelligence, Statistical Learning, Time Series Analysis, and Optimization Methods. Graduated with a GPA of 3.8/4.",
     type: "education",
   },
-  // {
-  //   title: "Data Analyst",
-  //   company: "Accenture",
-  //   logo: accentureLogo, // Add logo path
-  //   duration: "Feb 2021 - July 2023",
-  //   description:
-  //     "Developed Tableau dashboards to visualize KPIs, reducing operational costs by 20%, and built a CPLEX model in AMPL to optimize routes, cutting transport costs by 7%. Forecasted product demand using ML in Python, improving accuracy by 15%, and automated 10+ data processes, speeding up reporting and reducing errors. Built and optimized SQL scripts for data cleansing and aggregation, improving downstream data quality by 30%",
-  //   type: "experience",
-  // },
+  {
+    title: "Data Analyst",
+    company: "Accenture",
+    logo: accentureLogo, // Add logo path
+    duration: "Feb 2021 - July 2023",
+    description:
+      "Developed Tableau dashboards to visualize KPIs, reducing operational costs by 20%, and built a CPLEX model in AMPL to optimize routes, cutting transport costs by 7%. Forecasted product demand using ML in Python, improving accuracy by 15%, and automated 10+ data processes, speeding up reporting and reducing errors. Built and optimized SQL scripts for data cleansing and aggregation, improving downstream data quality by 30%",
+    type: "experience",
+  },
   {
     title: "Bachelor of Engineering in Electronics and Communication",
     institution: "CBIT, Hyderabad",
