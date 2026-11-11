@@ -228,7 +228,7 @@ export const SOCIAL_MEDIA_LINKS = [
     icon: <FaGithub fontSize={25} className="hover:opacity-80" />,
   },
   {
-    href: "https://www.linkedin.com/in/sathish-komire-b5980b160/",
+    href: "https://www.linkedin.com/in/sathish-komire/",
     icon: <FaLinkedin fontSize={25} className="hover:opacity-80" />,
   },
   {

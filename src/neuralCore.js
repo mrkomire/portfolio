@@ -67,9 +67,9 @@ export function initNeuralCore(stage) {
       height / 2,
       radius * 1.9,
     );
-    halo.addColorStop(0, "rgba(122,112,255,.09)");
-    halo.addColorStop(0.5, "rgba(63,186,221,.045)");
-    halo.addColorStop(1, "rgba(5,8,18,0)");
+    halo.addColorStop(0, "rgba(59,92,150,.08)");
+    halo.addColorStop(0.5, "rgba(15,23,42,.03)");
+    halo.addColorStop(1, "rgba(255,255,255,0)");
     ctx.fillStyle = halo;
     ctx.fillRect(0, 0, width, height);
     const projected = points.map((point) =>
@@ -82,7 +82,7 @@ export function initNeuralCore(stage) {
       ctx.beginPath();
       ctx.moveTo(p.x, p.y);
       ctx.lineTo(q.x, q.y);
-      ctx.strokeStyle = `rgba(107,213,247,${alpha})`;
+      ctx.strokeStyle = `rgba(31,56,100,${alpha})`;
       ctx.lineWidth = 0.7;
       ctx.stroke();
     }
@@ -106,7 +106,7 @@ export function initNeuralCore(stage) {
         else ctx.lineTo(p.x, p.y);
       }
       ctx.strokeStyle =
-        orbit === 1 ? "rgba(173,148,255,.23)" : "rgba(109,225,255,.19)";
+        orbit === 1 ? "rgba(71,85,105,.22)" : "rgba(31,56,100,.22)";
       ctx.lineWidth = 0.8;
       ctx.stroke();
       const head = phase * (0.43 + orbit * 0.08) + orbit * 2.1;
@@ -116,8 +116,8 @@ export function initNeuralCore(stage) {
         ctx.arc(p.x, p.y, j === 0 ? 2.5 : 1.25, 0, Math.PI * 2);
         ctx.fillStyle =
           orbit === 1
-            ? `rgba(189,164,255,${(1 - j / 22) * 0.85})`
-            : `rgba(157,237,255,${(1 - j / 22) * 0.85})`;
+            ? `rgba(71,85,105,${(1 - j / 22) * 0.85})`
+            : `rgba(59,92,150,${(1 - j / 22) * 0.85})`;
         ctx.fill();
       }
     }
@@ -128,13 +128,13 @@ export function initNeuralCore(stage) {
       ctx.arc(p.x, p.y, (i % 9 === 0 ? 2.3 : 1.1) * p.scale, 0, Math.PI * 2);
       ctx.fillStyle =
         i % 9 === 0
-          ? `rgba(191,165,255,${0.35 + front * 0.55})`
-          : `rgba(155,231,255,${0.18 + front * 0.6})`;
+          ? `rgba(51,65,85,${0.35 + front * 0.55})`
+          : `rgba(31,56,100,${0.18 + front * 0.6})`;
       ctx.fill();
       if (i % 13 === 0 && front > 0.6) {
         ctx.beginPath();
         ctx.arc(p.x, p.y, 5 + pulse * 3, 0, Math.PI * 2);
-        ctx.strokeStyle = `rgba(139,234,255,${pulse * 0.25})`;
+        ctx.strokeStyle = `rgba(59,92,150,${pulse * 0.25})`;
         ctx.lineWidth = 0.65;
         ctx.stroke();
       }

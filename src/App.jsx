@@ -4,6 +4,27 @@ import { initPortfolioMotion } from "./portfolioMotion";
 import { initNeuralCore } from "./neuralCore";
 import "./App.css";
 import "./future.css";
+import "./tech.css";
+
+function OrbitMark({ className = "", title }) {
+  return (
+    <svg
+      className={className}
+      viewBox="10 10 80 80"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="3.6"
+      strokeLinecap="round"
+      role={title ? "img" : undefined}
+      aria-label={title}
+      aria-hidden={title ? undefined : "true"}
+    >
+      <path d="M71.2,28.8 A30,30 0 1,0 79.2,57.8" />
+      <circle cx="50" cy="50" r="9" fill="currentColor" stroke="none" />
+      <circle cx="78" cy="40" r="4.5" fill="currentColor" stroke="none" />
+    </svg>
+  );
+}
 
 const skills = [
   [
@@ -24,16 +45,9 @@ const experience = [
   {
     role: "AI Engineer",
     company: "GRIBON & COMPANY",
-    date: "Feb 2026 — Present",
-    location: "United Kingdom",
-    text: "Building AI-powered products, knowledge retrieval systems, and integrations that turn business information into useful workflows.",
-  },
-  {
-    role: "AI & Data Science Consultant",
-    company: "GRIBON & COMPANY",
-    date: "Mar 2025 — Jan 2026",
-    location: "United States",
-    text: "Developed conversational AI for meeting transcripts and survey data, with cloud data pipelines and document analytics to support faster synthesis.",
+    date: "Mar 2025 — Present",
+    location: "United Kingdom · remote from USA until Jan 2026",
+    text: "Full-time · official title: AI and Data Transformation Consultant. The firm's one-person AI and engineering team: designed, built and run a complete AI consultation product solo (proven on 250+ test consultations), built 10+ Slack automations running 24/7 that save 300+ hours of manual work a week, and delivered deviation analysis for 4 big pharma clients.",
   },
   {
     role: "Business Intelligence Analyst",
@@ -51,6 +65,24 @@ const experience = [
   },
 ];
 const projects = [
+  {
+    title: "AI consultation platform, built solo",
+    category: "AI systems",
+    type: "Professional work",
+    text: "A complete product designed, built and run as sole engineer: expert matching, video consultations, booking and subscriptions, plus AI agents that turn consultations into client-ready reports and GraphRAG chat over a knowledge graph.",
+    tags: ["AI agents", "GraphRAG", "Full-stack"],
+    detail: "Proven on 250+ test consultations",
+    graphic: ["CONSULTATIONS", "AGENTS", "REPORTS"],
+  },
+  {
+    title: "Slack automation suite",
+    category: "AI systems",
+    type: "Professional work",
+    text: "10+ automations built as Slack apps and hosted on Railway, running 24/7 across different team workflows at a consulting firm.",
+    tags: ["Slack apps", "Python", "Railway"],
+    detail: "300+ hours saved every week",
+    graphic: ["SLACK", "24/7", "300+ HRS"],
+  },
   {
     title: "Conversational document intelligence",
     category: "AI systems",
@@ -113,7 +145,8 @@ function App() {
       </a>
       <header className="site-header">
         <a className="wordmark" href="#home" aria-label="Sathish Komire home">
-          sk<span>.</span>
+          <OrbitMark className="wordmark-mark" />
+          Sathish Komire
         </a>
         <nav
           id="navigation"
@@ -170,15 +203,16 @@ function App() {
             </p>
             <h1>
               <span className="title-line">
-                <span>Intelligence,</span>
+                <span>One engineer.</span>
               </span>
               <span className="title-line">
-                <em>engineered.</em>
+                <em>Whole AI team.</em>
               </span>
             </h1>
             <p className="hero-intro">
-              I’m Sathish Komire. I build AI applications, data systems, and
-              analytical tools that help people make better decisions.
+              I’m Sathish Komire, the one-person AI and engineering team at a
+              consulting firm in the UK. I build the AI product, the automations
+              and the analysis, and I run them in production.
             </p>
             <div className="actions">
               <a className="button primary" href="#work">
@@ -194,7 +228,7 @@ function App() {
               </a>
             </div>
             <div className="hero-footnote">
-              BASED IN THE UNITED KINGDOM · BUILDING WITH PURPOSE
+              BASED IN THE UNITED KINGDOM · OPEN TO AI ENGINEER & FDE ROLES
             </div>
           </div>
           <figure
@@ -202,7 +236,7 @@ function App() {
             aria-label="An artistic visualization of connected data and intelligence"
           >
             <div className="core-topline">
-              <span>INTELLIGENCE / IN MOTION</span>
+              <span>WHAT I RUN / IN PRODUCTION</span>
               <span className="core-cross" aria-hidden="true">
                 +
               </span>
@@ -219,13 +253,15 @@ function App() {
               <span className="core-tag tag-one">KNOWLEDGE GRAPHS</span>
               <span className="core-tag tag-two">APPLIED AI</span>
               <div className="core-center" aria-hidden="true">
-                <span>SK</span>
-                <small>CONNECTED THINKING</small>
+                <span className="orbit-logo">
+                  <OrbitMark />
+                </span>
+                <small>AI · DATA · AUTOMATION</small>
               </div>
             </div>
             <figcaption className="core-caption">
-              <span className="core-hint">Move your cursor to explore</span>
-              <span>DATA → INTELLIGENCE → IMPACT</span>
+              <span className="core-hint">250+ test consultations · 10+ automations</span>
+              <span>300+ HOURS SAVED / WEEK</span>
             </figcaption>
           </figure>
         </section>
@@ -239,11 +275,11 @@ function App() {
           <div className="section-heading">
             <div>
               <p className="eyebrow">SELECTED WORK</p>
-              <h2>Proof of possibility.</h2>
+              <h2>What I’ve built.</h2>
             </div>
             <p>
-              Selected explorations in AI, predictive modeling, and decision
-              science.
+              Products and automations running at a consulting firm, plus
+              selected data science projects from my MSc.
             </p>
           </div>
           <div className="project-filters" aria-label="Filter projects">
@@ -270,9 +306,9 @@ function App() {
                   </div>
                 ) : (
                   <div className="project-graphic" aria-hidden="true">
-                    <span>DOCUMENTS</span>
-                    <span>RETRIEVAL</span>
-                    <span>INSIGHT</span>
+                    {(project.graphic || ["DOCUMENTS", "RETRIEVAL", "INSIGHT"]).map((g) => (
+                      <span key={g}>{g}</span>
+                    ))}
                   </div>
                 )}
                 <div className="project-body">
@@ -317,20 +353,19 @@ function App() {
               <em>A statistician’s perspective.</em>
             </h2>
             <p className="about-copy">
-              My work sits at the intersection of software engineering, AI, and
-              business analytics. I enjoy connecting the whole journey:
-              understanding the problem, working with the data, building the
-              system, and making the result useful.
+              At Gribon I own everything technical: the client-facing AI
+              product, 10+ automations the consultants use every day, and the
+              deviation analysis behind live engagements for 4 big pharma
+              clients.
             </p>
             <p className="about-copy">
-              From enterprise automation at Accenture to manufacturing analytics
-              at Lonza and AI product development at GRIBON & COMPANY, I bring
-              both technical depth and a practical understanding of business
-              workflows.
+              Before that I built 20+ finance automations for TotalEnergies at
+              Accenture in India, and BI and predictive models for manufacturing
+              at Lonza in the USA, then an MSc in Business Statistics (GPA 3.8).
             </p>
             <a
               className="text-link"
-              href="https://www.linkedin.com/in/sathish-komire-b5980b160/"
+              href="https://www.linkedin.com/in/sathish-komire/"
               target="_blank"
               rel="noreferrer"
             >
@@ -349,8 +384,8 @@ function App() {
         <section id="experience" className="section-wrap content-section">
           <div className="section-heading">
             <div>
-              <p className="eyebrow">THE JOURNEY</p>
-              <h2>Experience that connects the dots.</h2>
+              <p className="eyebrow">EXPERIENCE</p>
+              <h2>India, USA, UK.</h2>
             </div>
           </div>
           <div className="experience-list">
@@ -387,8 +422,8 @@ function App() {
         <section className="section-wrap content-section certifications">
           <div className="section-heading">
             <div>
-              <p className="eyebrow">CONTINUOUS LEARNING</p>
-              <h2>Credentials & certifications.</h2>
+              <p className="eyebrow">CERTIFICATIONS</p>
+              <h2>Certified, and still learning.</h2>
             </div>
           </div>
           <div className="cert-grid">
@@ -410,13 +445,13 @@ function App() {
         <section id="contact" className="section-wrap contact-section">
           <p className="eyebrow">LET’S CONNECT</p>
           <h2>
-            Have a problem
+            Hiring for AI?
             <br />
-            worth <em>solving?</em>
+            <em>Let’s talk.</em>
           </h2>
           <p>
-            Let’s talk about AI products, data science, and turning an idea into
-            something useful.
+            Open to AI Engineer and Forward Deployed Engineer roles in the UK,
+            and always happy to talk about AI products, automation and data.
           </p>
           <div className="actions">
             <a className="button primary" href="mailto:mr.komire@gmail.com">
@@ -424,7 +459,7 @@ function App() {
             </a>
             <a
               className="text-link"
-              href="https://www.linkedin.com/in/sathish-komire-b5980b160/"
+              href="https://www.linkedin.com/in/sathish-komire/"
               target="_blank"
               rel="noreferrer"
             >
@@ -435,7 +470,8 @@ function App() {
       </main>
       <footer className="section-wrap site-footer">
         <a className="wordmark" href="#home">
-          sk<span>.</span>
+          <OrbitMark className="wordmark-mark" />
+          Sathish Komire
         </a>
         <span>© {new Date().getFullYear()} Sathish Komire</span>
         <a href="https://github.com/mrkomire" target="_blank" rel="noreferrer">
